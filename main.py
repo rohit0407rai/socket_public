@@ -9,8 +9,8 @@ import mediapipe as mp
 from flask_cors import CORS
 
 app = Flask(__name__, static_folder="static")
-CORS(app, origins="*")
-socketio = SocketIO(app,cors_allowed_origins="*")
+CORS(app, origins="http://127.0.0.1:5500")
+socketio = SocketIO(app,cors_allowed_origins="http://127.0.0.1:5500")
 
 @app.route("/favicon.ico")
 def favicon():
